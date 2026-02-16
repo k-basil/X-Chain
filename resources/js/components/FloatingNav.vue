@@ -1,8 +1,7 @@
 <template>
     <nav class="floating-nav" :class="{ visible: isVisible, hidden: isHidden }">
         <div class="nav-logo">
-            <span>X</span>
-            X-Chain
+            <img :src="navLogo" alt="X-Chain" />
         </div>
         <div class="nav-links">
             <a v-for="link in links" :key="link.href" :href="link.href" :class="{ active: activeSection === link.id }">
@@ -15,12 +14,13 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import navLogo from '../assets/xchain-loader.png';
 
 const links = [
-    { id: 'services', label: 'Services', href: '#services' },
-    { id: 'how', label: 'How It Works', href: '#how' },
-    { id: 'developers', label: 'Developers', href: '#developers' },
-    { id: 'partners', label: 'Partners', href: '#partners' },
+    { id: 'services', label: 'Products', href: '#services' },
+    { id: 'apis', label: 'APIs', href: '#apis' },
+    { id: 'stats', label: 'Patnership', href: '#stats' },
+    { id: 'faq', label: 'FAQ', href: '#faq' },
     { id: 'contact', label: 'Contact', href: '#contact' },
 ];
 

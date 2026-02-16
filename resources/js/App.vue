@@ -9,8 +9,8 @@
             <HeroSection />
             <TrustBar />
             <ServicesSection />
-            <HowItWorksSection />
             <ApiSection />
+             <HowItWorksSection />
             <EcosystemsSection />
             <DeveloperSection />
             <StatsSection />

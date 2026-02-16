@@ -152,6 +152,13 @@ button {
     font-weight: 700;
 }
 
+.nav-logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 10px rgba(0, 217, 192, 0.25));
+}
+
 .nav-logo span {
     display: inline-flex;
     align-items: center;
@@ -901,6 +908,7 @@ button {
     background-size: 40px 40px;
     opacity: 0.08;
     pointer-events: none;
+    z-index: 0;
 }
 
 .dev-grid {
@@ -2456,7 +2464,7 @@ button {
 }
 
 .ecosystems-note {
-    margin-top: 12px;
+    margin-top: 30px;
     color: var(--gray);
     font-size: 12px;
     letter-spacing: 0.12em;
