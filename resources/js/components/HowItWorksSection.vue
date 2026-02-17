@@ -82,35 +82,35 @@ const stages = [
     {
         title: 'Fast Integration',
         copy: 'Get live in hours with our RESTful APIs and webhooks',
-        delay: 200,
+        delay: 50,
         hub: true,
         icon: '<svg viewBox="0 0 24 24"><path d="M12 2l8 5v10l-8 5-8-5V7l8-5z"></path><circle cx="12" cy="12" r="2"></circle></svg>'
     },
     {
         title: 'Revenue Share',
         copy: 'Earn from every transaction your users make through our platform',
-        delay: 400,
+        delay: 100,
         hub: false,
         icon: '<svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="8" r="3"></circle><circle cx="18" cy="16" r="3"></circle><path d="M8.5 11l6-2.5"></path><path d="M8.5 13l6 2.5"></path></svg>'
     },
     {
         title: 'Keep Your UX',
         copy: 'Your users never leave your platform - we\'re invisible infrastructure',
-        delay: 600,
+        delay: 150,
         hub: false,
         icon: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c3 3 3 15 0 18"></path><path d="M12 3c-3 3-3 15 0 18"></path></svg>'
     },
     {
         title: 'Regional Coverage',
         copy: 'Expand across Ghana with our growing network',
-        delay: 800,
+        delay: 200,
         hub: false,
         icon: '<svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="8" r="3"></circle><circle cx="18" cy="16" r="3"></circle><path d="M8.5 11l6-2.5"></path><path d="M8.5 13l6 2.5"></path></svg>'
     },
     {
         title: '27/7 Support',
         copy: 'Dedicated technical support and account management',
-        delay: 1000,
+        delay: 250,
         hub: false,
         icon: '<svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="8" r="3"></circle><circle cx="18" cy="16" r="3"></circle><path d="M8.5 11l6-2.5"></path><path d="M8.5 13l6 2.5"></path></svg>'
     }

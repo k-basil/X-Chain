@@ -1,7 +1,9 @@
 <template>
     <nav class="floating-nav" :class="{ visible: isVisible, hidden: isHidden }">
         <div class="nav-logo">
-            <img :src="navLogo" alt="X-Chain" />
+         <a href="#hero" class="navbar-brand">
+            <img :src="navLogo" alt="X-Chain"/>
+         </a>
         </div>
         <div class="nav-links">
             <a v-for="link in links" :key="link.href" :href="link.href" :class="{ active: activeSection === link.id }">
