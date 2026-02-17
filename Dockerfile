@@ -1,11 +1,26 @@
 FROM php:8.3-cli
 
-# System deps
+# System deps + PHP extensions commonly required by Laravel
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
     libzip-dev \
-    && docker-php-ext-install zip \
+    libicu-dev \
+    libonig-dev \
+    libpng-dev \
+    libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    libcurl4-openssl-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install \
+        bcmath \
+        curl \
+        gd \
+        intl \
+        mbstring \
+        pdo \
+        pdo_mysql \
+        zip \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Composer
