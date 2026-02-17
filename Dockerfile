@@ -33,16 +33,14 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
 
 WORKDIR /app
 
+# Copy app first so artisan/bootstrap exist for composer scripts
+COPY . .
+
 # Install PHP deps
-COPY composer.json composer.lock ./
 RUN composer install --no-dev --optimize-autoloader
 
 # Install JS deps
-COPY package.json package-lock.json ./
 RUN npm ci
-
-# Copy app
-COPY . .
 
 # Build assets
 RUN npm run build
