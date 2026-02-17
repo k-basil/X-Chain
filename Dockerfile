@@ -46,7 +46,8 @@ ENV APP_ENV=production \
     SESSION_DRIVER=file \
     CACHE_STORE=file \
     QUEUE_CONNECTION=sync \
-    DB_CONNECTION=sqlite
+    DB_CONNECTION=sqlite \
+    ASSET_URL=/
 RUN cp .env.example .env \
     && sed -i 's/^APP_ENV=.*/APP_ENV=production/' .env \
     && sed -i 's/^APP_DEBUG=.*/APP_DEBUG=false/' .env \
@@ -54,6 +55,8 @@ RUN cp .env.example .env \
     && sed -i 's/^CACHE_STORE=.*/CACHE_STORE=file/' .env \
     && sed -i 's/^QUEUE_CONNECTION=.*/QUEUE_CONNECTION=sync/' .env \
     && sed -i 's/^DB_CONNECTION=.*/DB_CONNECTION=sqlite/' .env \
+    && sed -i 's#^APP_URL=.*#APP_URL=http://localhost#' .env \
+    && echo "ASSET_URL=/" >> .env \
     && php artisan key:generate --force \
     && mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views bootstrap/cache database \
     && touch database/database.sqlite \
