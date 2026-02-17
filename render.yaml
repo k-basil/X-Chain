@@ -2,9 +2,6 @@ services:
   - type: web
     name: x-chain
     env: php
-    buildCommand: |
-      composer install --no-dev --optimize-autoloader
-      npm ci
-      npm run build
+    buildCommand: "composer install --no-dev --optimize-autoloader && npm ci && npm run build"
     startCommand: php -S 0.0.0.0:$PORT -t public
     autoDeploy: true
