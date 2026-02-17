@@ -39,6 +39,14 @@ COPY . .
 # Install PHP deps
 RUN composer install --no-dev --optimize-autoloader
 
+# Prepare app env + key for production
+ENV APP_ENV=production \
+    APP_DEBUG=false \
+    LOG_CHANNEL=stderr
+RUN cp .env.example .env \
+    && php artisan key:generate --force \
+    && php artisan config:cache
+
 # Install JS deps
 RUN npm ci
 
